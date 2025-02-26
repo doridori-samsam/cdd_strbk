@@ -1,0 +1,74 @@
+//스크린 리더가 읽을 수 있는 숨김처리
+@mixin a11y-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border:0;
+  white-space: nowrap;
+}
+
+
+/* ------------- text style -------------*/
+@mixin text-style($style, $color: $text-black) {
+@if($style == 'h1') {
+  font-size: 2.7rem;
+  font-weight: $font-800;
+  color: $color;
+  }
+  @if($style == 'h2') {
+    font-size: 2.5rem;
+    font-weight: $font-700;
+    color: $color;
+  }
+  @if($style == 'h3') {
+    font-size: 2rem;
+    font-weight: $font-600;
+    color: $color;
+  }
+  @if($style == 'title') {
+    font-size: 1.7rem;
+    font-weight: $font-500;
+    color: $color;
+  }
+  @if($style == 'subtext') {
+    font-size: 0.95rem;
+    font-weight:s $font-400;
+    color: $color;
+  }
+  @if($style == 'body') {
+    font-size: 1.15rem;
+    font-weight: $font-400;
+    color: $color;
+  }
+  @if($style == 'body-sm') {
+    font-size: 1rem;
+    font-weight: $font-400;
+    color: $color;
+  }
+}
+
+
+//텍스트 줄임 처리
+@mixin text-shorten {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin grid-default($column: 2, $row: 2, $gap: 1rem) {
+  display: grid;
+  grid-template-columns: repeat($column, 1fr);
+  grid-template-rows: repeat($row, 1fr);
+  gap: $gap;
+}

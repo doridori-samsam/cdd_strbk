@@ -1,0 +1,146 @@
+@use '../../styles/global' as *;
+.btn {
+  @include flex-center;
+  width: fit-content;
+  height: 2rem;
+  border-radius: $radius-8;
+  font-weight: $font-500;
+  color: $text-black;
+  box-sizing: border-box;
+  &:hover {
+    cursor: pointer;
+  }
+  &.round {
+    border-radius: $radius-20;
+  }
+}
+
+.fit {
+  width: 100%;
+  height: 100%;
+}
+
+.xs {
+  width: 4.5rem;
+  font-size: 0.8rem;
+}
+.sm {
+  width: 5.5rem;
+  height: 2.2rem;
+  font-size: 0.9rem;
+}
+
+.md {
+  width: 7rem;
+  height: 2.4rem;
+  font-size: 0.9rem;
+}
+
+.lg {
+  width: 18rem;
+  height: 2.8rem;
+  font-size: 1rem;
+}
+
+.xl {
+  width: 24rem;
+  height: 3rem;
+  font-size: 1.1rem;
+}
+
+.outlined {
+  border: 1.5px solid;
+  transition: 0.3s ease;
+  &.primary {
+    border-color: $primary;
+    color: $primary;
+    &:hover {
+      border-color: $primary-medium;
+      color: $primary-medium;
+    }
+  }
+  &.secondary {
+    border-color: $secondary;
+    color: $secondary;
+    &:hover {
+      border-color: $secondary-light;
+      color: $secondary-light;
+    }
+  }
+  &.info {
+    border-color: $info;
+    color: $info;
+    &:hover {
+      border-color: $info-light;
+      color: $info-light;
+    }
+  }
+  &.success {
+    border-color: $success;
+    color: $success;
+    &:hover {
+      border-color: $success-light;
+      color: $success-light;
+    }
+  }
+  &.danger {
+    border-color: $error;
+    color: $error;
+    &:hover {
+      border-color: $error-light;
+      color: $error-light;
+    }
+  }
+  &:disabled {
+    border-color: $disabled;
+    color: $disabled;
+    cursor: not-allowed;
+    &:hover {
+      border-color: $disabled;
+      color: $disabled;
+    }
+  }
+}
+
+.contained {
+  color: $white;
+  border: none;
+  transition: 0.3s ease;
+  &.primary {
+    background-color: $primary;
+    &:hover {
+      background-color: $primary-medium;
+    }
+  }
+  &.secondary {
+    background-color: $secondary;
+    &:hover {
+      background-color: $secondary-medium;
+    }
+  }
+  &.info {
+    background-color: $info;
+    &:hover {
+      background-color: $info-medium;
+    }
+  }
+  &.success {
+    background-color: $success;
+    &:hover {
+      background-color: $success-medium;
+    }
+  }
+  &.danger {
+    background-color: $error;
+    &:hover{
+      background-color: $error-medium;
+    }
+  }
+  &:disabled {
+    background-color: $disabled;
+    cursor: not-allowed;
+    &:hover {
+      background-color: $disabled;
+    }
+  }
+}

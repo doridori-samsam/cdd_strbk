@@ -1,0 +1,42 @@
+@import "_reset.scss";
+@import "_variables.scss";
+@import "_mixins.scss";
+
+
+* {
+  font-family: 'pretendard', sans-serif;
+   box-sizing: border-box;
+}
+
+
+.a11y-hidden {
+  @include a11y-hidden;
+}
+
+
+h1 {
+  @include text-style('h1')
+}
+
+h2 {
+  @include text-style('h2')
+}
+
+h3 {
+  @include text-style('h3')
+}
+
+.title {
+  @include text-style('title')
+}
+.body-text{
+  @include text-style('body')
+}
+
+.body-text-sm {
+  @include text-style('body-sm')
+}
+
+.subtext {
+  @include text-style('subtext', $text-gray)
+}
