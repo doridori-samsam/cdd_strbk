@@ -4,9 +4,10 @@
   width: fit-content;
   height: 2rem;
   border-radius: $radius-8;
+  box-sizing: border-box;
+  font-size: 1rem;
   font-weight: $font-500;
   color: $text-black;
-  box-sizing: border-box;
   &:hover {
     cursor: pointer;
   }
@@ -49,56 +50,36 @@
 }
 
 .outlined {
-  border: 1.5px solid;
-  transition: 0.3s ease;
+  border: 1.4px solid;
+  transition: 0.2s ease;
+  will-change: border;
+  &:hover:not(:disabled) {
+    border: 1.98px solid;
+  }
   &.primary {
     border-color: $primary;
     color: $primary;
-    &:hover {
-      border-color: $primary-medium;
-      color: $primary-medium;
-    }
   }
   &.secondary {
     border-color: $secondary;
     color: $secondary;
-    &:hover {
-      border-color: $secondary-light;
-      color: $secondary-light;
-    }
   }
   &.info {
     border-color: $info;
     color: $info;
-    &:hover {
-      border-color: $info-light;
-      color: $info-light;
-    }
   }
   &.success {
     border-color: $success;
     color: $success;
-    &:hover {
-      border-color: $success-light;
-      color: $success-light;
-    }
   }
   &.danger {
     border-color: $error;
     color: $error;
-    &:hover {
-      border-color: $error-light;
-      color: $error-light;
-    }
   }
   &:disabled {
     border-color: $disabled;
     color: $disabled;
     cursor: not-allowed;
-    &:hover {
-      border-color: $disabled;
-      color: $disabled;
-    }
   }
 }
 

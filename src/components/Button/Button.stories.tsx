@@ -17,8 +17,18 @@ export default {
 export const Default = {
 	args: {
 		theme: 'outlined',
-		size: 'sm',
+		size: 'md',
 		color: 'primary',
 		children: '버튼',
+	}
+}
+
+export const Rounded ={
+	args: {
+		theme: 'contained',
+		size: 'md',
+		color: 'info',
+		children: '버튼',
+		rounded: true
 	}
 }
