@@ -15,8 +15,6 @@ const Button = forwardRef<HTMLButtonElement, Props>((props,ref) => {
 	const { children, theme, size, color, disabled, rounded, ...rest } = props;
 	const btnClass = classNames.bind(styles)('btn', theme || 'outlined', size || 'sm', color || 'primary', rounded ? 'round' : null);
 
-
-	console.log(btnClass)
 	return (
 		<button
 			className={btnClass}
